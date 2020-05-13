@@ -1,0 +1,19 @@
+How to build the MakeFile in Mega and Uno
+	ARDUINO_DIR = /usr/share/arduino
+	ARDUINO_PORT = /dev/ttyACM*
+	
+	USER_LIB_PATH = ...
+	BOARD_TAG = uno (or mega2560)
+	
+	include = /usr/share/arduino/Arduino.mk
+
+commands:
+	make : compile and make running file
+	make upload : upload code to your board (run command "make")
+	make clean : to clean up everything that we made before (highly rec for not causing crash later on)
+	make upload clean : upload and clean at the same time
+	make upload monitor clean : (to give you a screen for tracking your works )
+					screen -list : you can check what the current screens are using now
+					screen -r : to get back to your screen
+					screen -X quit : exit
+
